@@ -17,7 +17,7 @@ export default function Home() {
         <CardContent className="p-8 flex flex-col items-center space-y-6">
           <div className="text-center space-y-1">
             <h1 className="text-3xl font-semibold text-gray-800">Welcome to</h1>
-            <h1 className="text-4xl font-bold text-ecubo">
+            <h1 className="text-4xl font-bold">
               <strong>MOOX</strong>
             </h1>
           </div>
