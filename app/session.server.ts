@@ -24,7 +24,7 @@ export async function getSession(request: Request) {
 }
 
 export async function getUserId(
-  request: Request
+  request: Request,
 ): Promise<User["id"] | undefined> {
   const session = await getSession(request);
   const userId = session.get(USER_SESSION_KEY);
@@ -43,7 +43,7 @@ export async function getUser(request: Request) {
 
 export async function requireUserId(
   request: Request,
-  redirectTo: string = new URL(request.url).pathname
+  redirectTo: string = new URL(request.url).pathname,
 ) {
   const userId = await getUserId(request);
   if (!userId) {
@@ -78,9 +78,7 @@ export async function createUserSession({
   return redirect(redirectTo, {
     headers: {
       "Set-Cookie": await sessionStorage.commitSession(session, {
-        maxAge: remember
-          ? 60 * 60 * 24 * 7 // 7 days
-          : undefined,
+        maxAge: remember ? 60 * 60 * 24 * 7 : undefined,
       }),
     },
   });
