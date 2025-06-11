@@ -1,4 +1,5 @@
 import bcrypt from "bcryptjs";
+
 import type { Password, User } from "generated/prisma";
 import { prisma } from "~/lib/prisma";
 
@@ -53,7 +54,7 @@ export async function verifyLogin(
     return null;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // eslint-disable-next-line
   const { password: _password, ...userWithoutPassword } = userWithPassword;
 
   return userWithoutPassword;
