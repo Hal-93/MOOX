@@ -3,13 +3,6 @@ import { Link } from "react-router";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent } from "~/components/ui/card";
 
-export function meta() {
-  return [
-    { title: "MOOX" },
-    { name: "description", content: "Welcome to MOOX" },
-  ];
-}
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-blue-200 flex items-center justify-center p-4">
