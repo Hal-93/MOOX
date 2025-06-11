@@ -1,6 +1,6 @@
+import type { Password, User } from "@prisma/client";
 import bcrypt from "bcryptjs";
 
-import type { Password, User } from "generated/prisma";
 import { prisma } from "~/lib/prisma";
 
 export async function getUserById(id: User["id"]) {

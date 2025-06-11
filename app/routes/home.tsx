@@ -1,12 +1,10 @@
-import { Welcome } from "../welcome/welcome";
-
 export function meta() {
   return [
-    { title: "A" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "MOOX" },
+    { name: "description", content: "Welcome to MOOX" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return null;
 }

@@ -9,13 +9,7 @@ import tseslint from "typescript-eslint";
 export default [
   js.configs.recommended,
   {
-    ignores: [
-      "build/**",
-      "node_modules/**",
-      "generated/**",
-      ".react-router/**",
-      ".env",
-    ],
+    ignores: ["build/**", "node_modules/**", ".react-router/**", ".env"],
   },
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
@@ -32,11 +26,6 @@ export default [
       globals: {
         window: true,
         document: true,
-        global: "readonly",
-        process: "readonly",
-        URL: "readonly",
-        URLSearchParams: "readonly",
-        Request: "readonly",
       },
     },
     plugins: {
@@ -60,6 +49,7 @@ export default [
       },
     },
     rules: {
+      "no-undef": "off",
       "import/order": [
         "error",
         {
