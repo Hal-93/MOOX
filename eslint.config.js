@@ -9,7 +9,13 @@ import tseslint from "typescript-eslint";
 export default [
   js.configs.recommended,
   {
-    ignores: ["build/**", "node_modules/**", ".react-router/**", ".env"],
+    ignores: [
+      "build/**",
+      "node_modules/**",
+      ".react-router/**",
+      ".env",
+      "coverage/**",
+    ],
   },
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
